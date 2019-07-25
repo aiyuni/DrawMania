@@ -78,7 +78,3 @@ document.getElementById('sendDrawing').addEventListener('click', function(e) {
         return console.error(err.toString());
     });
 });
-
-
-
-asdf
