@@ -16,7 +16,19 @@ connection.on("ReceiveMessage", function (user, message) {
     var li = document.createElement("li");
     li.textContent = encodedMsg;
     document.getElementById("messagesList").appendChild(li);
-   
+
+    canvas = new fabric.Canvas('mainCanvas');
+    // create a rectangle object
+    rect = new fabric.Rect({
+        left: 100,
+        top: 100,
+        fill: 'red',
+        width: 20,
+        height: 20
+    });
+
+    // "add" rectangle onto canvas
+    canvas.add(rect);
 });
 
 connection.start().then(function () {
