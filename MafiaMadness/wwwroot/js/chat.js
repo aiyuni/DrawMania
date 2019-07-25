@@ -63,12 +63,16 @@ document.getElementById("drawButtonStart").addEventListener("click", function (e
 connection.on("ReceiveDrawingPersistent", function (user, drawing) {
     console.log('user', user);
     console.log('drawing', drawing);
-    canvas.renderAll(JSON.parse(canvas));
+    // Parse the canvas object back into a javascript object
+    canvas.renderAll(JSON.parse(canvas)); // <-- this doesn't work, but I think this is what you would do to load the canvas data and render it
+    
+    
     // canvas.isDrawingMode = true;
     // console.log("inside receive drawing persistent");
     // canvas.renderAll();
 });
 
+// Just a faked event to get around the unknown 'ondraw' event handler. Once this is clicked, it will send the canvas object (stringified) to the server, then the client
 document.getElementById('sendDrawing').addEventListener('click', function(e) {
     connection.invoke("SendDrawingPersistent", 'test', JSON.stringify(canvas)).catch(function (err) {
         return console.error(err.toString());
