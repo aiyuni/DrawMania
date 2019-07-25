@@ -24,7 +24,7 @@ connection.on("ReceiveMessage", function (user, message) {
         top: 100,
         fill: 'red',
         width: 20,
-        height: 20
+        height: 20,
     });
 
     // "add" rectangle onto canvas
@@ -61,10 +61,20 @@ document.getElementById("drawButtonStart").addEventListener("click", function (e
 });
 
 connection.on("ReceiveDrawingPersistent", function (user, drawing) {
-    canvas.isDrawingMode = true;
-    console.log("inside receive drawing persistent");
-    canvas.renderAll();
+    console.log('user', user);
+    console.log('drawing', drawing);
+    canvas.renderAll(JSON.parse(canvas));
+    // canvas.isDrawingMode = true;
+    // console.log("inside receive drawing persistent");
+    // canvas.renderAll();
+});
+
+document.getElementById('sendDrawing').addEventListener('click', function(e) {
+    connection.invoke("SendDrawingPersistent", 'test', JSON.stringify(canvas)).catch(function (err) {
+        return console.error(err.toString());
+    });
 });
 
 
 
+asdf
