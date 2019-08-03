@@ -6,6 +6,10 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
 var canvas; 
 var rect;
 var initialized = false;
+var brush;
+
+//logic variables
+var isBrushDown = false;
 
 //Disable send button until connection is established
 document.getElementById("sendButton").disabled = true;
@@ -81,15 +85,31 @@ $(document).ready(function () {
         console.log("clicked body");
     });
 
-    canvas.on('mouse:down', function (options) {
-        console.log("mousedown: coordinates:" + options.e.clientX + ", " + options.e.clientY);
-        canvas.on('mouse:move', function (event) {
-            console.log("inside mouse:move... coordinates: " + event.e.clientX + ", " + event.e.clientY);
-        })
+    canvas.on('mouse:down', function (event) {
+        isBrushDown = true;
+        console.log("mousedown: coordinates:" + event.e.clientX + ", " + event.e.clientY);
+       // handleMouseDown(user, this.getPointer(event.e));
+        console.log("Stringify getPointer: " + JSON.stringify(this.getPointer(event.e)))
+        connection.invoke("SendMouseDown", "platypus", JSON.stringify(this.getPointer(event.e)));
 
     });
 
-    canvas.on('path:created', function (e) {
+    canvas.on('mouse:move', function (event) {
+        if (!isBrushDown) {
+            return;
+        }
+        console.log("inside mouse:move... coordinates: " + event.e.clientX + ", " + event.e.clientY);
+        connection.invoke("SendMouseMovement", "platypus", JSON.stringify(this.getPointer(event.e)));
+    })
+
+    canvas.on('mouse:up', function (event) {
+        isBrushDown = false;
+        console.log("mouseup: coordinates: " + event.e.clientX + ", " + event.e.clientY);
+        //handleMouseUp(this.getPointer(event.e));
+
+    })
+
+    /*canvas.on('path:created', function (e) {
         console.log("inside path:created clientside event");
         var createdPath = e.path;
         console.log(createdPath.toString());
@@ -97,9 +117,43 @@ $(document).ready(function () {
         connection.invoke("SendDrawingPersistent", "platypus", JSON.stringify(e.path)).catch(function (err) {
             return console.error(err.toString());
         });
-        // ... do something with your path
+    }); */
+
+    connection.on("ReceiveMouseDown", function (user, coordinate) {
+
+        console.log("inside receive mouse down: " + coordinate);
+        var coordinateObject = JSON.parse(coordinate);
+        console.log('coordinateObject is: ' + coordinate);
+
+        brush = new fabric.PencilBrush(canvas);
+        brush.onMouseDown(coordinateObject);
+
+        canvas.renderAll();
     });
 
+    connection.on("ReceiveMouseMovement", function (user, coordinate) {
+        console.log("inside receivemouseMove: " + coordinate);
+        brush.onMouseMove(JSON.parse(coordinate));
+        canvas.renderAll();
+    });
+
+    function handleMouseDown(user, point) {
+        brush = new fabric.PencilBrush(canvas);;
+        connection.invoke
+        brush.onMouseDown(point);
+    }
+
+    function handleMouseDrag(point) {
+        brush.onMouseMove(point);
+
+    }
+
+    function handleMouseUp(point) {
+        console.log("handling mouseup...");
+        brush.onMouseUp(point);
+
+        //delete brush;
+    }
 
 });
 

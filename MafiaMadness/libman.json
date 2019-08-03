@@ -13,10 +13,12 @@
     {
       "provider": "cdnjs",
       "library": "fabric.js@3.3.2",
-      "destination": "wwwroot/lib/fabric.js/",
-      "files": [
-        "fabric.js"
-      ]
+      "destination": "wwwroot/lib/fabric.js/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "fabric.js@3.2.0",
+      "destination": "wwwroot/lib/fabric32.js/"
     }
   ]
 }

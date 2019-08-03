@@ -20,10 +20,17 @@ namespace MafiaMadness.Hubs
             await Clients.All.SendAsync("ReceiveDrawingPersistent", user, drawing);
         }
 
+        public async Task sendMouseDown(string user, string coordinates)
+        {
+            Console.WriteLine("inside sendMouseDown server");
+            await Clients.All.SendAsync("ReceiveMouseDown", user, coordinates);
+        }
+
         public async Task sendMouseMovement(string user, string coordinates)
         {
             Console.WriteLine("inside sendMouseMovement");
             await Clients.All.SendAsync("ReceiveMouseMovement", user, coordinates);
         }
+        
     }
 }
