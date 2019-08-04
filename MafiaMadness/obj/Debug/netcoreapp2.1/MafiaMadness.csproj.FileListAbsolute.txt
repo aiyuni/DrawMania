@@ -29,3 +29,4 @@ C:\Users\Perry\source\repos\MafiaMadness\MafiaMadness\obj\Debug\netcoreapp2.1\Ma
 C:\Users\Perry\source\repos\MafiaMadness\MafiaMadness\obj\Debug\netcoreapp2.1\MafiaMadness.dll
 C:\Users\Perry\source\repos\MafiaMadness\MafiaMadness\obj\Debug\netcoreapp2.1\MafiaMadness.pdb
 C:\Users\Perry\source\repos\MafiaMadness\MafiaMadness\obj\Debug\netcoreapp2.1\MafiaMadness.csproj.CopyComplete
+C:\Users\Perry\source\repos\MafiaMadness\MafiaMadness\obj\Debug\netcoreapp2.1\MafiaMadness.csprojAssemblyReference.cache

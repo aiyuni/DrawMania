@@ -42,13 +42,14 @@ document.getElementById("sendButton").addEventListener("click", function (event)
 document.getElementById("drawButtonStart").addEventListener("click", function (event) {
     canvas.isDrawingMode = true;
     console.log("inside drawButtonStart event handler, calling ServerSide SendDrawing method...")
-    connection.invoke("SendDrawingPersistent", user, drawing).catch(function (err) {
+    /* connection.invoke("SendDrawingPersistent", user, drawing).catch(function (err) {  //not needed since we don't want to send Path anymore
         return console.error(err.toString());
-    });
+    }); */
     
     event.preventDefault();
 });
 
+//no longer used
 connection.on("ReceiveDrawingPersistent", function (user, drawing) {
 
     canvas.isDrawingMode = true;
@@ -136,6 +137,12 @@ $(document).ready(function () {
         brush.onMouseMove(JSON.parse(coordinate));
         canvas.renderAll();
     });
+
+    connection.on("ReceiveMouseUp", function (user, coordinate) {
+        console.log("inside receive mouse up: " + coordinate);
+        brush.onMouseDown(JSON.parse(coordinate));
+        canvas.renderAll();
+    })
 
     function handleMouseDown(user, point) {
         brush = new fabric.PencilBrush(canvas);;
