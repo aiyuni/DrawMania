@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <_PublishTargetUrl>ftp://home740154731.1and1-data.host/Whiteboard</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>07/22/2019 22:19:17</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>07/22/2019 22:19:17</publishTime>
+    </File>
+    <File Include="libman.json">
+      <publishTime>08/03/2019 10:49:50</publishTime>
+    </File>
+    <File Include="MafiaMadness.deps.json">
+      <publishTime>08/08/2019 19:35:59</publishTime>
+    </File>
+    <File Include="MafiaMadness.dll">
+      <publishTime>08/08/2019 19:35:51</publishTime>
+    </File>
+    <File Include="MafiaMadness.pdb">
+      <publishTime>08/08/2019 19:35:51</publishTime>
+    </File>
+    <File Include="MafiaMadness.runtimeconfig.json">
+      <publishTime>08/08/2019 19:35:59</publishTime>
+    </File>
+    <File Include="MafiaMadness.Views.dll">
+      <publishTime>08/08/2019 19:35:51</publishTime>
+    </File>
+    <File Include="MafiaMadness.Views.pdb">
+      <publishTime>08/08/2019 19:35:51</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>08/08/2019 19:35:59</publishTime>
+    </File>
+    <File Include="wwwroot/css/site.css">
+      <publishTime>08/03/2019 20:50:12</publishTime>
+    </File>
+    <File Include="wwwroot/css/site.min.css">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/favicon.ico">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/images/banner1.svg">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/images/banner2.svg">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/images/banner3.svg">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/js/chat.js">
+      <publishTime>08/03/2019 15:57:32</publishTime>
+    </File>
+    <File Include="wwwroot/js/Globals.js">
+      <publishTime>08/08/2019 18:12:05</publishTime>
+    </File>
+    <File Include="wwwroot/js/ReceiverChat.js">
+      <publishTime>08/06/2019 21:55:46</publishTime>
+    </File>
+    <File Include="wwwroot/js/SenderChat.js">
+      <publishTime>08/03/2019 18:34:28</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/.bower.json">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css.map">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css.map">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css.map">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.js">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.min.js">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/npm.js">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/LICENSE">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/fabric.js/fabric.js">
+      <publishTime>08/03/2019 10:52:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/.bower.json">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/.bower.json">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.js">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.min.js">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.js">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.min.js">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/LICENSE.md">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/.bower.json">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.js">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.js">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.map">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/LICENSE.txt">
+      <publishTime>07/22/2019 22:19:18</publishTime>
+    </File>
+    <File Include="wwwroot/lib/signalr/dist/browser/signalr.js">
+      <publishTime>07/22/2019 22:48:42</publishTime>
+    </File>
+    <File Include="wwwroot/lib/signalr/dist/browser/signalr.min.js">
+      <publishTime>07/22/2019 22:48:42</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
